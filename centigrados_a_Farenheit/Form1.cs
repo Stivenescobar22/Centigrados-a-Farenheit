@@ -17,15 +17,53 @@ namespace centigrados_a_Farenheit
         public Form1()
         {
             InitializeComponent();
+            cmbtemperaturas.Text = "Seleccione..";
+            cmbtemperaturas.Items.Add("Seleccione..");
+            cmbtemperaturas.Items.Add("Fharenheit");
+            cmbtemperaturas.Items.Add("Kelvin ");
+            
+           
+
         }
 
         private void btncalcular_Click(object sender, EventArgs e)
         {
 
-            conversion.setCentigrados(double.Parse(txtcentigrados.Text));
-            lblresultado.Text = " Farenheit:  " + conversion.farenheit().ToString();
-            lblresultado.Visible = true;
-            txtcentigrados.Focus();
+          
+            //conversion.setCentigrados(double.Parse(txtcentigrados.Text));
+            //lblresultado.Text = " Farenheit:  " + conversion.farenheit().ToString();
+            //lblresultado.Visible = true;
+            //txtcentigrados.Focus();
+
+            switch (cmbtemperaturas.SelectedIndex.ToString()){
+
+                case "1":
+
+                    conversion.setCentigrados(double.Parse(txtcentigrados.Text));
+                    lblresultado.Text = " Farenheit:  " + conversion.farenheit().ToString();
+                    lblresultado.Visible = true;
+                    txtcentigrados.Focus();
+
+                    break;
+
+                case "2":
+                    conversion.setCentigrados(double.Parse(txtcentigrados.Text));
+                    lblresultado.Text = "Kelvin:  " + conversion.Kelvin().ToString();
+                    lblresultado.Visible = true;
+                    txtcentigrados.Focus();
+                    break;
+
+                default:
+
+                    MessageBox.Show("Ingrese un Valor"
+                        , "Mensaje de Advertencia"
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Error);
+
+                    break;
+
+
+            }
         }
     }
 }

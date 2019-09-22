@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace centigrados_a_Farenheit
 {
    public class Conversion
-    {
+   {
         private double centigrados;
-       
+        
 
         public void setCentigrados(double valor){
 
@@ -26,5 +26,14 @@ namespace centigrados_a_Farenheit
 
             return ((this.getCentigrados() * 9/5) + 32 );
         }
+
+        public double Kelvin(){
+
+            return (this.getCentigrados() + 273.15);
+
+        }
+
+       
+        
     }
 }

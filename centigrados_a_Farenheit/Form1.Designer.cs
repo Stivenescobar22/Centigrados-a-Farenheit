@@ -34,6 +34,7 @@
             this.lblcentigrados = new System.Windows.Forms.Label();
             this.lblmensaje = new System.Windows.Forms.Label();
             this.lblresultado = new System.Windows.Forms.Label();
+            this.cmbtemperaturas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btncalcular
@@ -78,7 +79,7 @@
             // 
             this.lblmensaje.AutoSize = true;
             this.lblmensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmensaje.Location = new System.Drawing.Point(84, 74);
+            this.lblmensaje.Location = new System.Drawing.Point(29, 79);
             this.lblmensaje.Name = "lblmensaje";
             this.lblmensaje.Size = new System.Drawing.Size(95, 16);
             this.lblmensaje.TabIndex = 4;
@@ -95,11 +96,20 @@
             this.lblresultado.Text = "Resultado";
             this.lblresultado.Visible = false;
             // 
+            // cmbtemperaturas
+            // 
+            this.cmbtemperaturas.FormattingEnabled = true;
+            this.cmbtemperaturas.Location = new System.Drawing.Point(133, 78);
+            this.cmbtemperaturas.Name = "cmbtemperaturas";
+            this.cmbtemperaturas.Size = new System.Drawing.Size(100, 21);
+            this.cmbtemperaturas.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 216);
+            this.ClientSize = new System.Drawing.Size(287, 297);
+            this.Controls.Add(this.cmbtemperaturas);
             this.Controls.Add(this.lblresultado);
             this.Controls.Add(this.lblmensaje);
             this.Controls.Add(this.lblcentigrados);
@@ -121,6 +131,7 @@
         private System.Windows.Forms.Label lblcentigrados;
         private System.Windows.Forms.Label lblmensaje;
         private System.Windows.Forms.Label lblresultado;
+        private System.Windows.Forms.ComboBox cmbtemperaturas;
     }
 }
 
